@@ -1,0 +1,9 @@
+<!-- 启动乌龟gui与键盘控制节点 -->
+<launch>
+    <!-- 相当于终端同时输入两行命令，并显示到屏幕上 -->
+    <!-- 如：rosrun turtlesim turtlesim_node -->
+    <!-- 乌龟gui -->
+    <node pkg="turtlesim" type="turtlesim_node" name="turtle1" output="screen" />
+    <!-- 键盘控制 -->
+    <node pkg="turtlesim" type="turtle_teleop_key" name="key" output="screen" />
+</launch>

@@ -1,0 +1,12 @@
+<launch>
+    <!-- 需求：演示arg的使用，设置多个同值参数（小车长度） -->
+    <!-- <param name="A" value="0.5" />
+    <param name="B" value="0.5" />
+    <param name="C" value="0.5" /> -->
+
+    <arg name="car_length" default="0.5" />
+    <param name="A" value="$(arg car_length)" />
+    <param name="B" value="$(arg car_length)" />
+    <param name="C" value="$(arg car_length)" />
+
+</launch>

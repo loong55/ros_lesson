@@ -1,0 +1,13 @@
+<launch>
+    <!-- rosparam使用：操作参数服务器数据 -->
+    <!-- 加载参数 -->
+    <!-- 格式1：launch 下,node 外 -->
+    <rosparam command="load" file="$(find launch01_basic)/launch/params.yaml" />
+    <node pkg="turtlesim" type="turtlesim_node" name="my_turtle" output="screen">
+        <remap from="/turtle1/cmd_vel" to="/cmd_vel" />
+        <!-- 格式2：node下 -->
+    <rosparam command="load" file="$(find launch01_basic)/launch/params.yaml" />
+    </node>
+    <!-- 老键盘控制节点 -->
+    <node pkg="turtlesim" type="turtle_teleop_key" name="my_key" output="screen"/>
+</launch>

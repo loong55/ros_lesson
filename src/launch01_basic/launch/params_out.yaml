@@ -1,0 +1,14 @@
+bg_B: 255
+bg_G: 50
+bg_R: 100
+my_turtle: {background_b: 255, background_g: 86, background_r: 69, bg_B: 255, bg_G: 50,
+  bg_R: 100}
+rosdistro: 'melodic
+
+  '
+roslaunch:
+  uris: {host_100ask__34033: 'http://100ask:34033/', host_100ask__38167: 'http://100ask:38167/'}
+rosversion: '1.14.13
+
+  '
+run_id: 41cbdd6e-65f5-11ef-947b-000c294e710c
