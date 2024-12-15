@@ -9,6 +9,7 @@
     <xacro:property name="support_z" value="${base_link_length / 2 + support_length / 2}" />
     <xacro:property name="support_m" value="0.02" />
 
+    <!-- support link -->
     <link name="support">
         <visual>
             <geometry>
@@ -50,6 +51,7 @@
 
     <xacro:property name="laser_m" value="0.1" />
 
+    <!-- laser -->
     <link name="laser">
         <visual>
             <geometry>

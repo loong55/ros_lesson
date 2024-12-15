@@ -7,6 +7,16 @@
     <xacro:include filename="demo06_car_camera.urdf.xacro" />
     <xacro:include filename="demo07_car_laser.urdf.xacro" />
 
-
+    <!-- move control-->
     <xacro:include filename="gazebo/move.xacro" />
+
+    <!-- laser -->
+    <xacro:include filename="gazebo/laser.xacro" />
+
+    <!-- camera -->
+    <xacro:include filename="gazebo/camera.xacro" />
+
+    <!-- kinect -->
+    <xacro:include filename="gazebo/kinect.xacro" />
+
 </robot>

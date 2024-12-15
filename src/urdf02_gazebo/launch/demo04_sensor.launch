@@ -1,0 +1,11 @@
+<launch>
+    <!-- 添加点云坐标系到kinet连杆坐标系的n变换 -->
+    <!-- args: x y z 绕z 绕y 绕x 父级坐标系 子级坐标系-->
+    <node pkg="tf2_ros" type="static_transform_publisher" name="static_transform_publisher" args="0 0 0 -1.57 0 -1.57 /support /support_depth" />
+
+    <!-- 先运行dmeo03启动gazebo,此时已经将robot_description载入了参数服务器，此时无需重复载入，启动rviz会自动调用参数服务器 -->
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find urdf01_rviz)/config/base_footprint.rviz" />
+    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher" output="screen" />
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen" />
+    
+</launch>
