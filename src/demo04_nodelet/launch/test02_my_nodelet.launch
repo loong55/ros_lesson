@@ -1,0 +1,14 @@
+<launch>
+    <!-- 设置nodelet管理器 -->
+    <node pkg="nodelet" type="nodelet" name="dasun" args="manager" output="screen" />
+    <!-- 启动节点1，名称为 n1, 参数 /n1/value 为100 -->
+    <node pkg="nodelet" type="nodelet" name="xiaowang" args="load demo04_nodelet/MyPlus dasun" output="screen" >
+        <param name="value" value="100" />
+    </node>
+    <!-- 启动节点2，名称为 n2, 参数 /n2/value 为-50 -->
+    <node pkg="nodelet" type="nodelet" name="ergou" args="load demo04_nodelet/MyPlus dasun" output="screen" >
+        <param name="value" value="-50" />
+        <remap from="/ergou/in" to="/xiaowang/out" />
+    </node>
+
+</launch>

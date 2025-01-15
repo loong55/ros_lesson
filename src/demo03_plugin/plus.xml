@@ -1,0 +1,19 @@
+<!-- 
+    需要定位动态链接库
+        /home/book/ws/devel/lib/libplus.so
+        library 根标签下的path属性
+    声明子类与父类
+        library 的子标签 class 声明
+ -->
+<!-- 插件库的相对路径 -->
+<library path="lib/libplus">
+  <!-- type="插件类" base_class_type="基类" -->
+  <class type="dbx_plugins_ns::SanBian" base_class_type="dbx_base_ns::Dbx_Base">
+    <!-- 描述信息 -->
+    <description>正三边形插件</description>
+  </class>
+  <class type="dbx_plugins_ns::SiBian" base_class_type="dbx_base_ns::Dbx_Base">
+    <!-- 描述信息 -->
+    <description>正四边形插件</description>
+  </class>
+</library>
